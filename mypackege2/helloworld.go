@@ -9,4 +9,5 @@ func main() {
 	mypackege.New()
 	fmt.Println("Hello World")
 	mypackege.NewCommon()
+	fmt.Println(mypackege.Name)
 }
