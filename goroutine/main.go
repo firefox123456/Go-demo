@@ -1,16 +1,31 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func f(i *int) {
 	fmt.Println(*i)
 	*i++
 }
+func display() {
+	count := 1
+	for {
+		fmt.Println("子go程序:", count)
+		count++
+		time.Sleep(1 * time.Second)
+	}
+}
 
 func main() {
-	i:=0
-	f(&i)
-	go f(&i)
-	f(&i)
-	fmt.Println(i)
+
+	go display()
+
+	count := 1
+	for {
+		fmt.Println("主go程序:", count)
+		count++
+		time.Sleep(1 * time.Second)
+	}
 }
