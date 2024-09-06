@@ -7,5 +7,5 @@ require (
 )
 
 replace (
-	"firefox123456/mypackege" => "../mypackege"
+	"firefox123456/mypackege" => "./../mypackege"
 )
